@@ -85,7 +85,7 @@ const answers = chapter.faqs.map((f) => ({
     <div id="pagination" style="display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-top:20px;"></div>
   </div>
 
-  <style>
+  <style is:global>
     /* Preserves \n line breaks inside a question's text (e.g. numbered
        sub-statements like "1. ... 2. ..." or "I. ... II. ...") instead of
        collapsing them into one run-on paragraph. pre-line still collapses
