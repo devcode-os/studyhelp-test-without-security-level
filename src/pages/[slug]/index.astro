@@ -96,12 +96,13 @@ const answers = chapter.faqs.map((f) => ({
        (.lang-te) are untouched so Telugu font sizing stays exactly as-is. */
     @media (max-width: 640px) {
       .lang-en h1 { font-size: 19px !important; }
-      .lang-en .q-text { font-size: 15px !important; }
+      .lang-en .q-text { font-size: 15px !important; font-weight: 600 !important; }
       .lang-en .opt-letter,
       .lang-en .opt-text { font-size: 14px !important; }
       .lang-en .answer-text { font-size: 14px !important; font-weight: 600 !important; }
       .lang-en .expl-text { font-size: 14px !important; }
       .lang-en .expl-toggle { font-size: 12px !important; }
+      .lang-te .q-text { font-weight: 600 !important; }
     }
   </style>
 
