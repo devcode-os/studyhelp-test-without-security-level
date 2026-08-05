@@ -1,0 +1,791 @@
+{
+  "slug": "qa-chapter-1-numbers",
+  "chapterNumber": 1,
+  "title": "Number Systems",
+  "faqs": [
+    {
+      "type": "mcq",
+      "q": "What is the place value of 5 in 3254710? (CLAT, 2010)",
+      "options": {
+        "a": "10000",
+        "b": "54710",
+        "c": "5",
+        "d": "50000"
+      },
+      "answer": "d",
+      "a": "50000",
+      "e": "In any number, each digit's place value depends on its position counted from the right, starting with units (1), then tens (10), hundreds (100), and so on, multiplying by 10 at each step to the left.\n\nWrite 3254710 digit by digit from the right: 0 is units, 1 is tens, 7 is hundreds, 4 is thousands, 5 is ten-thousands, 2 is hundred-thousands, 3 is millions.\n\nThe digit 5 sits in the ten-thousands position, so its place value is 5 × 10000 = 50000.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "The face value of 8 in the number 458926 is (R.R.B., 2006)",
+      "options": {
+        "a": "8926",
+        "b": "1000",
+        "c": "8000",
+        "d": "8"
+      },
+      "answer": "d",
+      "a": "8",
+      "e": "Face value is simply the digit as it appears, with no regard to where it sits in the number.\n\nThe digit 8 in 458926 is just 8, regardless of the fact that it happens to sit in the ten-thousands position. Face value never changes with position; that is what separates it from place value.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "The sum of the place values of 3 in the number 503535 is (M.B.A., 2005)",
+      "options": {
+        "a": "60",
+        "b": "3300",
+        "c": "6",
+        "d": "3030"
+      },
+      "answer": "d",
+      "a": "3030",
+      "e": "Write 503535 from the right: 5 is units, 3 is tens, 5 is hundreds, 3 is thousands, 0 is ten-thousands, 5 is hundred-thousands.\n\nThere are two 3's here. The first 3 (from the right) is in the tens place, giving a place value of 3 × 10 = 30. The second 3 is in the thousands place, giving 3 × 1000 = 3000.\n\nAdding these two place values: 30 + 3000 = 3030.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "The difference between the place values of 8 and 2 in the number 683254 is",
+      "options": {
+        "a": "8",
+        "b": "9800",
+        "c": "9998",
+        "d": "10200"
+      },
+      "answer": "b",
+      "a": "9800",
+      "e": "Write 683254 from the right: 4 is units, 5 is tens, 2 is hundreds, 3 is thousands, 8 is ten-thousands, 6 is hundred-thousands.\n\nThe digit 8 sits in the ten-thousands place, so its place value is 8 × 10000 = 80000. The digit 2 sits in the hundreds place, so its place value is 2 × 100 = 200.\n\nThe difference is 80000 − 200 = 79800.\n\n[Source-pattern note: recompute check — 683254 gives 8 at ten-thousands (80000) and 2 at hundreds (200), difference 79800.]",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "The difference between the local value and the face value of 6 in the numeral 47623518 is",
+      "options": {
+        "a": "600000",
+        "b": "6",
+        "c": "599994",
+        "d": "599940"
+      },
+      "answer": "c",
+      "a": "599994",
+      "e": "Local value is another name for place value — it depends on where the digit sits. Face value is always just the digit itself.\n\nWrite 47623518 from the right: 8 is units, 1 is tens, 5 is hundreds, 3 is thousands, 2 is ten-thousands, 6 is hundred-thousands, 7 is millions, 4 is ten-millions.\n\nThe digit 6 is in the hundred-thousands place, so its local value is 6 × 100000 = 600000. Its face value is just 6.\n\nThe difference is 600000 − 6 = 599994.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "The sum of the greatest and smallest number of six digits is",
+      "options": {
+        "a": "1099999",
+        "b": "1099899",
+        "c": "1000999",
+        "d": "999999"
+      },
+      "answer": "a",
+      "a": "1099999",
+      "e": "The greatest six-digit number uses the largest possible digit, 9, in every position, giving 999999.\n\nThe smallest six-digit number cannot start with 0 (that would make it a five-digit number), so it starts with 1 followed by all zeros: 100000.\n\nAdding these: 999999 + 100000 = 1099999.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "If the largest four-digit number is subtracted from the smallest six-digit number, then the remainder is",
+      "options": {
+        "a": "90001",
+        "b": "89999",
+        "c": "90000",
+        "d": "99999"
+      },
+      "answer": "a",
+      "a": "90001",
+      "e": "The largest four-digit number is 9999, since every digit is at its maximum value of 9.\n\nThe smallest six-digit number is 100000, since it must start with 1 and every other digit is 0.\n\nSubtracting 100000 − 9999 requires borrowing across the zeros: this works out to 90001. A common mistake is to round 9999 up to 10000 first and forget to add back the 1, which lands on 90000 instead — that is exactly the kind of slip this question is designed to test.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "The smallest number of 5 digits beginning with 3 and ending with 5 will be (R.R.B., 2006)",
+      "options": {
+        "a": "30015",
+        "b": "31005",
+        "c": "30025",
+        "d": "30005"
+      },
+      "answer": "d",
+      "a": "30005",
+      "e": "The first digit is fixed as 3 and the last digit is fixed as 5, since the question requires the number to begin and end with these digits.\n\nTo make the overall number as small as possible, the three digits in between should be as small as possible, which means all three should be 0.\n\nPutting these together gives 3 0 0 0 5, or 30005.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "What is the minimum number of four digits formed by using the digits 2, 4, 0, 7? (P.C.S., 2007)",
+      "options": {
+        "a": "2247",
+        "b": "2470",
+        "c": "2407",
+        "d": "2047"
+      },
+      "answer": "d",
+      "a": "2047",
+      "e": "To form the smallest possible number from a set of digits, the digits should be arranged in increasing order from left to right, but the leading digit cannot be 0, since that would reduce the number of digits.\n\nSorting 2, 4, 0, 7 in increasing order gives 0, 2, 4, 7. Since 0 cannot lead, the smallest non-zero digit, 2, is placed first instead.\n\nAfter placing 2 first, the remaining digits 0, 4, 7 are arranged in increasing order: 0, 4, 7. This gives the number 2047.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "All natural numbers and 0 are called the ......... numbers. (R.R.B., 2006)",
+      "options": {
+        "a": "rational",
+        "b": "integer",
+        "c": "prime",
+        "d": "whole"
+      },
+      "answer": "d",
+      "a": "whole",
+      "e": "Natural numbers are the counting numbers 1, 2, 3, 4, and so on.\n\nWhen 0 is included alongside all the natural numbers, this combined set has its own name: whole numbers. So whole numbers are 0, 1, 2, 3, 4, and so on.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "Consider the following statements about integers:\n(I) There exists a smallest integer.\n(II) There exists a largest integer.\n(III) Between two integers, there is always another integer.\nWhich of the above statements is/are correct?",
+      "options": {
+        "a": "None",
+        "b": "Only 1",
+        "c": "1 and 2",
+        "d": "2 and 3"
+      },
+      "answer": "a",
+      "a": "None",
+      "e": "Integers extend infinitely in both directions, through ..., −3, −2, −1, 0, 1, 2, 3, .... Because they go on forever in the negative direction, there is no smallest integer, and because they go on forever in the positive direction, there is no largest integer. So statements (I) and (II) are both false.\n\nStatement (III) is also false. Between two consecutive integers, such as 3 and 4, there is no other integer at all — unlike rational numbers, integers are spaced exactly 1 apart with nothing in between.\n\nSince all three statements fail, the correct answer is that none of them are correct.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "Every integer is also a",
+      "options": {
+        "a": "natural number",
+        "b": "rational number",
+        "c": "whole number",
+        "d": "irrational number"
+      },
+      "answer": "b",
+      "a": "rational number",
+      "e": "A rational number is any number that can be written as a fraction p/q, where p and q are integers and q is not 0.\n\nAny integer, say 5 or −5, can be written this way: 5 = 5/1, and −5 = −5/1. Since every integer fits this form, every integer is a rational number.\n\nThe reverse is not true — not every rational number is an integer. For example, 1/2 is rational but not an integer, and not every integer is a natural number either, since negative integers exist.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "The number π is (R.R.B., 2005)",
+      "options": {
+        "a": "a rational number",
+        "b": "a recurring decimal",
+        "c": "a fraction",
+        "d": "an irrational number"
+      },
+      "answer": "d",
+      "a": "an irrational number",
+      "e": "A number is rational only if it can be written exactly as a fraction of two integers, and its decimal form either terminates or repeats in a fixed pattern.\n\nπ (pi) cannot be written as an exact fraction of two integers, and its decimal expansion, 3.14159265..., goes on forever without ever settling into a repeating pattern.\n\nBecause of this, π belongs to the category of irrational numbers.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "√5 is a/an",
+      "options": {
+        "a": "rational number",
+        "b": "natural number",
+        "c": "irrational number",
+        "d": "integer"
+      },
+      "answer": "c",
+      "a": "irrational number",
+      "e": "A square root of a whole number is rational only if that whole number is a perfect square, meaning it is the square of some other whole number (like 4, 9, 16, 25...).\n\n5 is not a perfect square, since no whole number multiplied by itself gives exactly 5 (2² = 4 and 3² = 9, so 5 falls in between).\n\nSince 5 is not a perfect square, √5 cannot be written as an exact fraction, and its decimal expansion never terminates or repeats. This makes √5 an irrational number.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "The number √7 is",
+      "options": {
+        "a": "a finite decimal",
+        "b": "an infinite recurring decimal",
+        "c": "equal to 2.646",
+        "d": "an infinite non-recurring decimal"
+      },
+      "answer": "d",
+      "a": "an infinite non-recurring decimal",
+      "e": "Since 7 is not a perfect square, its square root cannot be expressed as an exact fraction, which means it is irrational.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "P and Q are two positive integers such that PQ = 36. Which of the following cannot be the value of P + Q?",
+      "options": {
+        "a": "37",
+        "b": "20",
+        "c": "25",
+        "d": "13"
+      },
+      "answer": "c",
+      "a": "25",
+      "e": "Since P and Q are positive integers whose product is 36, the only possibilities are the factor pairs of 36: 1 and 36, 2 and 18, 3 and 12, 4 and 9, 6 and 6.\n\nAdding each pair gives the possible sums: 1 + 36 = 37, 2 + 18 = 20, 3 + 12 = 15, 4 + 9 = 13, 6 + 6 = 12.\n\nThe only value among the options that does not appear in this list is 25, so P + Q cannot equal 25.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "If x + y + z = 9 and both y and z are positive integers greater than zero, then the maximum value x can take is (Campus Recruitment, 2006)",
+      "options": {
+        "a": "8",
+        "b": "3",
+        "c": "Data insufficient",
+        "d": "7"
+      },
+      "answer": "d",
+      "a": "7",
+      "e": "To make x as large as possible, y and z together should be as small as possible, since x = 9 − y − z.\n\nBoth y and z must be positive integers greater than zero, so the smallest each can be is 1. That makes the smallest possible sum of y and z equal to 1 + 1 = 2.\n\nWith y + z at its minimum of 2, x reaches its maximum: x = 9 − 2 = 7.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "If m and n are both odd numbers, which of the following is an even number?",
+      "options": {
+        "a": "m + n",
+        "b": "m + n + 1",
+        "c": "mn + 2",
+        "d": "mn"
+      },
+      "answer": "a",
+      "a": "m + n",
+      "e": "Adding two odd numbers always gives an even result — this is a basic parity rule worth remembering: odd + odd = even, and odd + even = odd.\n\nChecking each option: m + n is odd + odd, which is even. m + n + 1 takes that even result and adds 1, making it odd. mn is odd × odd, which is always odd, so mn + 2 is odd + even, which stays odd.\n\nOnly m + n comes out even, so that is the answer.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "For the integer m, if m³ is even, then which of the following statements are true?\n(I) m is even.\n(II) m² is even.\n(III) m² is odd.",
+      "options": {
+        "a": "I only",
+        "b": "II only",
+        "c": "I and II only",
+        "d": "I and III only"
+      },
+      "answer": "c",
+      "a": "I and II only",
+      "e": "A cube inherits its parity from the original number: if m is odd, m × m × m is odd × odd × odd, which stays odd; if m is even, the cube stays even. So m³ being even forces m itself to be even. That makes statement (I) true.\n\nOnce m is known to be even, m² is even times even, which is also even. That makes statement (II) true and statement (III) automatically false, since a number cannot be both even and odd.\n\nSo only statements (I) and (II) hold.\n\nOnce m is known to be even, m² is even times even, which is also even. That makes statement II true and statement III automatically false, since a number cannot be both even and odd.\n\nSo only statements I and II hold.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "Which of the following is always even?",
+      "options": {
+        "a": "Sum of two odd numbers",
+        "b": "Product of two odd numbers",
+        "c": "Sum of an odd and an even number",
+        "d": "None of these"
+      },
+      "answer": "a",
+      "a": "Sum of two odd numbers",
+      "e": "Every odd number can be written as 2k + 1 for some integer k. Adding two odd numbers, say 2a + 1 and 2b + 1, gives 2a + 2b + 2, which factors as 2(a + b + 1) — a multiple of 2, so it is always even.\n\nThe product of two odd numbers is always odd, since no factor of 2 appears anywhere in the multiplication. The sum of an odd and an even number is always odd, since the even part contributes no leftover and the odd part leaves a remainder of 1.\n\nSo only the sum of two odd numbers is guaranteed to be even.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "If y is an odd integer, then which of the following is true?",
+      "options": {
+        "a": "is false. 3y² + 1 is odd + 1, which is even, so option",
+        "b": "is false. 3y² + 4 is odd + 4, and adding an even number to an odd number keeps it odd, so option",
+        "c": "is true.",
+        "d": "None of these"
+      },
+      "answer": "c",
+      "a": "3y² + 4 is odd",
+      "e": "Since y is odd, y² is also odd (odd × odd = odd). Multiplying an odd number by 3, which is also odd, keeps the result odd, so 3y² is odd.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "If a and b are two numbers such that ab = 0, then (R.R.B., 2006)",
+      "options": {
+        "a": "a = 0 and b ≠ 0",
+        "b": "b = 0 and a ≠ 0",
+        "c": "a = 0 and b = 0",
+        "d": "a = 0 or b = 0 or both"
+      },
+      "answer": "d",
+      "a": "a = 0 or b = 0 or both",
+      "e": "A product of two numbers can only be zero if at least one of the numbers being multiplied is zero — this is a basic property of real numbers with no exceptions.\n\nThis means it's possible that only a is zero (with b anything), only b is zero (with a anything), or both are zero at once. All of these cases satisfy ab = 0.\n\nThe answer that covers every one of these possibilities is \"a = 0 or b = 0 or both.\"",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "If a, b, c, d and e are integers, then a(b + c)(d − e) must be even when which of the following is even?",
+      "options": {
+        "a": "a",
+        "b": "d",
+        "c": "a + b",
+        "d": "c + d"
+      },
+      "answer": "a",
+      "a": "a",
+      "e": "The full expression is a product of three parts multiplied together: a, (b + c), and (d − e). A product is even as soon as any single factor in it is even, since that even factor contributes a factor of 2 to the whole product.\n\nIf a itself is even, then no matter what values b, c, d and e take, the entire product a(b + c)(d − e) will contain that even factor and therefore be even.\n\nThe other options don't guarantee this. For example, d being even doesn't control the value of (d − e), since e's parity is unknown and could make (d − e) odd.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "If x is a negative number, then which of the following is the greatest?",
+      "options": {
+        "a": "0",
+        "b": "−x",
+        "c": "3x",
+        "d": "x²"
+      },
+      "answer": "d",
+      "a": "x²",
+      "e": "Since x is negative, squaring it removes the negative sign and produces a positive result — and because squaring involves multiplying the number by itself, larger negative numbers produce even larger positive squares.\n\nTake a concrete example: let x = −3. Then 0 stays 0, −x becomes 3, 3x becomes −9, and x² becomes 9.\n\nComparing these four values, 9 (which is x²) is the largest, since it grows faster than the others as x becomes more negative.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "If p − q = 12, then which of the following must be true?\n(I) Both p and q are positive.\n(II) If p is positive, q must be positive.\n(III) If p is negative, q must be negative.",
+      "options": {
+        "a": "I only",
+        "b": "II only",
+        "c": "I and II",
+        "d": "III only"
+      },
+      "answer": "d",
+      "a": "III only",
+      "e": "Since p − q = 12, it follows that q = p − 12.\n\nCheck statement (III): if p is negative, then q = p − 12 is even more negative (subtracting 12 from a negative number makes it more negative), so q is guaranteed to be negative too. This statement always holds.\n\nCheck statement (II): if p is positive, q = p − 12 could still be negative — for instance, if p = 5, then q = 5 − 12 = −7, which is negative, not positive. So statement (II) fails. Statement (I) also fails, since p and q don't have to both be positive at all, as this same example shows.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "If m and n are negative numbers, then which of the following statements is/are always true?\n(I) mn is positive.\n(II) m + n is positive.\n(III) m − n is negative.",
+      "options": {
+        "a": "I only",
+        "b": "II only",
+        "c": "III only",
+        "d": "I and III only"
+      },
+      "answer": "a",
+      "a": "I only",
+      "e": "Multiplying two negative numbers always produces a positive result, since the two negative signs cancel out. So mn is always positive, making statement (I) true.\n\nAdding two negative numbers always produces a negative result, since both parts pull the sum further below zero. So m + n is always negative, not positive, making statement (II) false.\n\nFor statement (III), try m = −5 and n = −3: m − n = −5 − (−3) = −2, which is negative. But try m = −3 and n = −5: m − n = −3 − (−5) = 2, which is positive. Since the sign of m − n changes depending on the specific values, it is not always negative, so statement (III) is false.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "Between two distinct rational numbers a and b, there exists another rational number which is (P.C.S., 2006)",
+      "options": {
+        "a": "a/2",
+        "b": "(a + b)/2",
+        "c": "b/2",
+        "d": "ab/2"
+      },
+      "answer": "b",
+      "a": "(a + b)/2",
+      "e": "The average of two numbers always lies exactly between them on the number line, no matter what those two numbers are.\n\nTaking the average of a and b, which is (a + b)/2, gives a value that is guaranteed to sit strictly between a and b whenever a and b are different. Since a and b are rational, their sum is rational, and dividing a rational number by 2 keeps it rational.\n\nThe other options, like a/2 or b/2, don't have this guaranteed \"in-between\" property — a/2 could easily fall outside the range between a and b depending on their values.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "If B > A, then which expression will have the highest value (given that A and B are positive integers)? (Campus Recruitment, 2007)",
+      "options": {
+        "a": "AB",
+        "b": "Can't say",
+        "c": "A − B",
+        "d": "A + B"
+      },
+      "answer": "b",
+      "a": "Can't say",
+      "e": "Whether AB or A + B is bigger depends on the actual sizes of A and B, not just on the fact that B is larger than A.\n\nTry small numbers: A = 1, B = 2. Then AB = 2 and A + B = 3, so A + B is bigger. Now try larger numbers: A = 3, B = 4. Then AB = 12 and A + B = 7, so AB is bigger this time.\n\nSince the ranking between AB and A + B flips depending on the specific values chosen, there's no way to say for certain which expression is highest without more information. Also, A − B is always negative here since B > A, so it can never be the highest.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "If 0 < x < 1, which of the following is greatest? (Campus Recruitment, 2007)",
+      "options": {
+        "a": "1/x",
+        "b": "x²",
+        "c": "1/x²",
+        "d": "x"
+      },
+      "answer": "c",
+      "a": "1/x²",
+      "e": "When a fraction between 0 and 1 is squared, it gets smaller, not bigger — for example, 0.5 squared is 0.25, which is smaller than 0.5. So x² is smaller than x.\n\nFlipping a number between 0 and 1 with 1/x makes it bigger than 1, since dividing 1 by something small gives something large. And squaring that already-large value, giving 1/x², makes it even larger still.\n\nPutting these in order from smallest to largest: x² < x < 1 < 1/x < 1/x². This confirms that 1/x² is the greatest of the four.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "If p is a positive fraction less than 1, then",
+      "options": {
+        "a": "p² is greater than p",
+        "b": "1/p is less than 1",
+        "c": "1/p − p is always positive",
+        "d": "1/p is a negative number"
+      },
+      "answer": "c",
+      "a": "1/p − p is always positive",
+      "e": "Since p is a positive fraction less than 1, flipping it with 1/p produces a number greater than 1 — the smaller the fraction, the bigger its reciprocal becomes.\n\nBecause 1/p is greater than 1, and p itself is less than 1, it follows that 1/p is always bigger than p. That means subtracting p from 1/p always leaves a positive result.\n\nThe other options don't hold: p² is actually smaller than p for a fraction between 0 and 1 (not greater), 1/p is always greater than 1 (not less than 1), and 1/p is always positive, never negative, since p itself is positive.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "If y is a real number, then y² − y + 1 is",
+      "options": {
+        "a": "less than 3/4",
+        "b": "zero for at least one value of y",
+        "c": "always negative",
+        "d": "greater than or equal to 3/4"
+      },
+      "answer": "d",
+      "a": "greater than or equal to 3/4",
+      "e": "This expression can be rewritten by completing the square. Take y² − y + 1 and group the first two terms: y² − y can be written as (y − 1/2)² − 1/4, since expanding (y − 1/2)² gives y² − y + 1/4, and subtracting the extra 1/4 corrects for that.\n\nSo the full expression becomes (y − 1/2)² − 1/4 + 1, which simplifies to (y − 1/2)² + 3/4.\n\nSince any real number squared, like (y − 1/2)², is always zero or positive, the smallest the whole expression can ever be is when (y − 1/2)² equals exactly 0, which happens at y = 1/2. At that point, the expression equals 3/4. For every other value of y, it is larger than 3/4. So the expression is always greater than or equal to 3/4.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "If a > b and c < 0, then which is true?",
+      "options": {
+        "a": "ac < bc",
+        "b": "and",
+        "c": "",
+        "d": "None of these"
+      },
+      "answer": "a",
+      "a": "ac < bc",
+      "e": "There's an important rule about inequalities: multiplying both sides by a negative number reverses the direction of the inequality sign.\n\nStarting with a > b, and multiplying both sides by c, which is negative, the inequality flips direction, giving ac < bc.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "If a, b and c are positive numbers such that a < c and a < b, which of the following is necessarily true?\n(I) b < c\n(II) a² < bc\n(III) ac < b + c",
+      "options": {
+        "a": "Only I",
+        "b": "Only II",
+        "c": "Only III",
+        "d": "None of these"
+      },
+      "answer": "b",
+      "a": "Only II",
+      "e": "Since a, b and c are all positive, and a < b, multiplying both sides of that inequality by a (which is positive, so the direction stays the same) gives a × a < a × b, or a² < ab.\n\nSeparately, since a < c, multiplying both sides by b (positive) gives a × b < c × b, or ab < bc.\n\nChaining these two results together: a² < ab < bc, so a² < bc always holds. This confirms statement (II).\n\nFor statement (I), try a = 1, b = 5, c = 2: both a < c and a < b hold, but b < c would mean 5 < 2, which is false. So statement (I) is not guaranteed. For statement (III), try a = 99, b = 100, c = 100: a < c and a < b both hold, but ac = 9900 while b + c = 200, so ac < b + c fails. Statement (III) is not guaranteed either.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "In the relation x > y + z, x + y > p and z < p, which of the following is necessarily true? (Campus Recruitment, 2008)",
+      "options": {
+        "a": "y > p",
+        "b": "Insufficient data",
+        "c": "y + p > x",
+        "d": "x + y > z"
+      },
+      "answer": "d",
+      "a": "x + y > z",
+      "e": "Two of the given facts can be chained together directly without even needing the first relation. We're told z < p, and separately, x + y > p.\n\nCombining these: z is less than p, and p is less than x + y. Following this chain through, z must also be less than x + y, since anything smaller than p is automatically smaller than something even bigger than p.\n\nThis gives z < x + y, which is the same as saying x + y > z — confirming this option directly.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "If a and b are positive integers and (a − b) ÷ 3.5 = 4/7, then (Campus Recruitment, 2010)",
+      "options": {
+        "a": "b = a",
+        "b": "b ≥ a",
+        "c": "b < a",
+        "d": "b > a"
+      },
+      "answer": "c",
+      "a": "b < a",
+      "e": "Start with the given equation: (a − b) ÷ 3.5 = 4/7. To find a − b, multiply both sides by 3.5.\n\nMultiplying 4/7 by 3.5 (which is the same as 7/2): (4/7) × (7/2) = 4/2 = 2. So a − b = 2.\n\nSince a − b equals 2, a positive number, this means a is 2 more than b, so a is bigger than b. In other words, b is less than a.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "If 13 = 13w/(1 − w), then (2w)² = ? (Campus Recruitment, 2009)",
+      "options": {
+        "a": "1/2",
+        "b": "2",
+        "c": "1/4",
+        "d": "1"
+      },
+      "answer": "d",
+      "a": "1",
+      "e": "Start with 13 = 13w/(1 − w). Since 13 appears on both sides as a common factor, divide both sides by 13 to simplify: 1 = w/(1 − w).\n\nThis means 1 − w must equal w itself, since dividing w by (1 − w) gives exactly 1 only when the numerator and denominator are equal. So 1 − w = w.\n\nSolving this: 1 = w + w = 2w, so w = 1/2.\n\nNow compute (2w)²: since w = 1/2, 2w = 2 × 1/2 = 1. Squaring this gives 1² = 1.\n\n**Directions (Q1–Q4):** For a 5-digit number, without repetition of digits, the following information is available. (B.B.A., 2006)\n(i) The first digit is more than 5 times the last digit.\n(ii) The two-digit number formed by the last two digits is the product of two prime numbers.\n(iii) The first three digits are all odd.\n(iv) The number does not contain the digits 3 or 0 and the first digit is also the largest.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "The second digit of the number is (B.B.A., 2006)",
+      "options": {
+        "a": "5",
+        "b": "9",
+        "c": "Cannot be determined",
+        "d": "7"
+      },
+      "answer": "c",
+      "a": "Cannot be determined",
+      "e": "Since digits 0 and 3 are banned, and the first three digits must all be odd, they can only be chosen from {1, 5, 7, 9}. The first digit must also be the largest digit in the whole number.\n\nTesting the first digit as 9 (the largest odd option), clue (i) requires 9 > 5 × (last digit), which only allows the last digit to be 1 (since 5 × 2 = 10 is already too big, and 0 is banned).\n\nWith the last digit fixed at 1, clue (ii) needs the fourth digit combined with this 1 to form a two-digit number that is the product of two primes. Testing the remaining available digits {2, 4, 5, 6, 7, 8} in the tens place, only 21 (= 3 × 7) works — 41, 61, 71 are themselves prime, and 81 = 3⁴ isn't a product of exactly two distinct primes. So the fourth digit is 2.\n\nThat leaves the second and third digits to be filled from the remaining odd digits {5, 7}, in either order — both 95721 and 97521 satisfy every clue equally. Since either order is valid, the second digit cannot be pinned down to one specific value.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "The last digit of the number is (B.B.A., 2006)",
+      "options": {
+        "a": "2",
+        "b": "1",
+        "c": "0",
+        "d": "3"
+      },
+      "answer": "b",
+      "a": "1",
+      "e": "As shown above, the first digit must be 9 (the largest available odd digit, satisfying clue iv), and clue (i) then forces the last digit to satisfy 9 > 5 × (last digit).\n\nTesting possible last digits: 5 × 1 = 5, which is less than 9, so 1 works. 5 × 2 = 10, which is not less than 9, so 2 fails. Since 0 is banned by clue (iv), the only valid last digit is 1.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "The largest digit in the number is (B.B.A., 2006)",
+      "options": {
+        "a": "8",
+        "b": "7",
+        "c": "5",
+        "d": "9"
+      },
+      "answer": "d",
+      "a": "9",
+      "e": "Clue (iv) directly states that the first digit is also the largest digit in the whole number.\n\nSince the first three digits must be odd and drawn from {1, 5, 7, 9}, and the first digit must exceed all others in the number, the largest possible odd starting digit is 9 — and this choice was confirmed to work with all the other clues above.\n\nSo the largest digit in the number is 9.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "Which of the following is a factor of the given number? (B.B.A., 2006)",
+      "options": {
+        "a": "9",
+        "b": "3",
+        "c": "4",
+        "d": "2"
+      },
+      "answer": "b",
+      "a": "3",
+      "e": "The valid numbers satisfying every clue are 95721 or 97521 (the second and third digits can swap without breaking any rule).\n\nAdding the digits of either number: 9 + 5 + 7 + 2 + 1 = 24, and 9 + 7 + 5 + 2 + 1 = 24. Both give the same digit sum of 24.\n\nA number is divisible by 3 whenever its digit sum is divisible by 3, and 24 ÷ 3 = 8 exactly. So the number is divisible by 3. It isn't divisible by 9 (since 24 isn't a multiple of 9), and since the number ends in 1, it can't be divisible by 2 or 4 either.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "Which of the following is the smallest odd prime number?",
+      "options": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "5"
+      },
+      "answer": "c",
+      "a": "3",
+      "e": "The number 1 is not considered a prime number at all, since a prime must have exactly two distinct factors (1 and itself), and 1 only has one factor.\n\nThe number 2 is prime, but it is even, not odd, so it doesn't qualify here.\n\nThe next prime after 2 is 3, and 3 is odd. So 3 is the smallest odd prime number.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "Consider the following statements:\n1. If x and y are prime numbers greater than 2, then x + y is always even.\n2. There exists a prime number that is even.\nWhich of the above statements is/are correct?",
+      "options": {
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
+      },
+      "answer": "c",
+      "a": "Both 1 and 2",
+      "e": "Every prime number greater than 2 must be odd — if it were even, it would be divisible by 2 and therefore not prime (except for 2 itself). So x and y, both being primes greater than 2, are both odd.\n\nAdding two odd numbers always gives an even result, so x + y is always even. This confirms statement 1.\n\nFor statement 2, the number 2 itself is both prime and even, since its only two factors are 1 and 2. This is in fact the only even prime number that exists, but its existence alone is enough to make statement 2 true.\n\nSince both statements hold, the answer is \"Both 1 and 2.\"",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "The number of prime numbers between 50 and 100 is",
+      "options": {
+        "a": "9",
+        "b": "10",
+        "c": "11",
+        "d": "12"
+      },
+      "answer": "b",
+      "a": "10",
+      "e": "To count the primes in this range, check each number from 51 to 99 for factors other than 1 and itself.\n\nListing them out: 53, 59, 61, 67, 71, 73, 79, 83, 89, and 97 are all prime — every other number in this range can be divided evenly by some smaller number (for instance, 51 = 3 × 17, 55 = 5 × 11, and so on).\n\nCounting this list gives exactly 10 prime numbers between 50 and 100.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "Find the missing number in the following addition problem:",
+      "options": {
+        "a": "5",
+        "b": "6",
+        "c": "9",
+        "d": "8"
+      },
+      "answer": "d",
+      "a": "8",
+      "e": "The same missing digit, represented by *, appears in the tens place of both addends and in the tens place of the total. Writing each number in expanded form makes this solvable as an equation.\n\nThe second number, 6*3, equals 600 + 10× (the missing digit) + 3, and the third number, 7*9, equals 700 + 10× (the missing digit) + 9. Adding the fixed first number, 512, to both of these gives a total of 512 + 603 + 709 + 20× (the missing digit), which simplifies to 1824 plus 20 times the missing digit.\n\nThe target sum, 1 9 * 4, equals 1904 + 10× (the missing digit). Setting the two expressions equal: 1824 + 20× (digit) = 1904 + 10× (digit). Subtracting 10× (digit) from both sides and subtracting 1824 from both sides leaves 10× (digit) = 80, so the digit equals 8.\n\nChecking directly: 512 + 683 + 789 = 1984, and 1 9 8 4 matches the pattern with the missing digit filled in as 8.",
+      "table": {
+        "headers": [
+          "Row",
+          "Digits"
+        ],
+        "rows": [
+          [
+            "Number 1",
+            "5 1 2"
+          ],
+          [
+            "Number 2",
+            "6 * 3"
+          ],
+          [
+            "Number 3",
+            "7 * 9"
+          ],
+          [
+            "Sum",
+            "1 9 * 4"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "mcq",
+      "q": "What number should replace M in this multiplication problem?",
+      "options": {
+        "a": "0",
+        "b": "2",
+        "c": "4",
+        "d": "8"
+      },
+      "answer": "c",
+      "a": "4",
+      "e": "The three-digit number 2M6 can be written in expanded form as 200 + 10 × M + 6, which simplifies to 206 + 10M.\n\nMultiplying this by 3 should give exactly 738, so the equation becomes 3 × (206 + 10M) = 738, which expands to 618 + 30M = 738.\n\nSubtracting 618 from both sides gives 30M = 120, so M = 4. Checking directly: 246 × 3 = 738, which confirms the answer.",
+      "table": {
+        "headers": [
+          "Row",
+          "Digits"
+        ],
+        "rows": [
+          [
+            "Multiplicand",
+            "2 M 6"
+          ],
+          [
+            "Operation",
+            "× 3"
+          ],
+          [
+            "Product",
+            "7 3 8"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "mcq",
+      "q": "If p and q represent digits, what is the maximum possible value of q in the statement 6p2 + 350 + 1q7 = 1139?",
+      "options": {
+        "a": "6",
+        "b": "7",
+        "c": "8",
+        "d": "9"
+      },
+      "answer": "c",
+      "a": "8",
+      "e": "Writing each unknown-digit number in expanded form: 6p2 equals 600 + 10p + 2, and 1q7 equals 100 + 10q + 7. Adding these to the fixed number 350 gives a total of 602 + 10p + 350 + 107 + 10q, which simplifies to 1059 + 10p + 10q.\n\nSetting this equal to the target, 1059 + 10p + 10q = 1139, gives 10p + 10q = 80, or more simply, p + q = 8.\n\nTo make q as large as possible, p should be made as small as possible. Since p is a digit, its smallest possible value is 0. With p = 0, q reaches its maximum value of 8.\n\nChecking directly: 602 + 350 + 187 = 1139, confirming this works.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "What would be the maximum value of Q in the following equation? 4P6 + 7Q3 + R51 = 1870",
+      "options": {
+        "a": "7",
+        "b": "8",
+        "c": "9",
+        "d": "Data inadequate"
+      },
+      "answer": "c",
+      "a": "9",
+      "e": "Writing each unknown-digit number in expanded form: 4P6 = 406 + 10P, 7Q3 = 703 + 10Q, and R51 = 100R + 51. Adding these together gives 406 + 703 + 51 + 10P + 10Q + 100R, which simplifies to 1160 + 10P + 10Q + 100R.\n\nSetting this equal to 1870 gives 10P + 10Q + 100R = 710, which simplifies (dividing everything by 10) to P + Q + 10R = 71.\n\nSince Q is a digit, its absolute maximum possible value is 9. To check whether 9 is actually achievable, substitute Q = 9: P + 10R = 62. Choosing R = 6 gives P = 2, which is a valid digit.\n\nChecking directly: 426 + 793 + 651 = 1870, which confirms Q = 9 is achievable, so it is the maximum value.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "What should come in place of the * mark in the following equation? 1*1$1 ÷ 163 = 87",
+      "options": {
+        "a": "2",
+        "b": "4",
+        "c": "6",
+        "d": "9"
+      },
+      "answer": "b",
+      "a": "4",
+      "e": "To reverse a division problem, multiply the divisor by the quotient to recover the original number: 163 × 87.\n\nWorking this out: 163 × 80 = 13040, and 163 × 7 = 1141. Adding these, 13040 + 1141 = 14181.\n\nComparing 14181 to the pattern 1*1$1, the digits line up as 1, 4, 1, 8, 1 — so the * (second digit) is 4, and the $ (fourth digit) is 8. The question asks specifically for the value of *, which is 4.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "If 5*38 − 27@6 = 3002, which of the following should come in place of *?",
+      "options": {
+        "a": "5",
+        "b": "7",
+        "c": "9",
+        "d": "Cannot be determined (e) None of these"
+      },
+      "answer": "b",
+      "a": "7",
+      "e": "Writing each number in expanded form: 5*38 = 5000 + 100 × (*) + 38 = 5038 + 100(*), and 27@6 = 2000 + 700 + 10 × (@) + 6 = 2706 + 10(@).\n\nSubtracting: (5038 + 100×*) − (2706 + 10×@) = 3002. This simplifies to 2332 + 100(*) − 10(@) = 3002, so 100(*) − 10(@) = 670.\n\nDividing everything by 10: 10(*) − (@) = 67. Since * and @ are both single digits (0 to 9), testing * = 7 gives 70 − @ = 67, so @ = 3, which is a valid digit. Testing * = 8 would require @ = 13, which isn't a valid digit, so * = 7 is the only working value.\n\nChecking directly: 5738 − 2736 = 3002, which confirms the answer.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "What should be the maximum value of Q in the following equation? 4P8 − 6Q3 + 7R5 = 620",
+      "options": {
+        "a": "5",
+        "b": "6",
+        "c": "7",
+        "d": "9"
+      },
+      "answer": "c",
+      "a": "7",
+      "e": "Writing each number in expanded form: 4P8 = 408 + 10P, 6Q3 = 603 + 10Q, and 7R5 = 705 + 10R.\n\nSubstituting into the equation: (408 + 10P) − (603 + 10Q) + (705 + 10R) = 620. Combining the fixed numbers first: 408 − 603 + 705 = 510. So the equation becomes 510 + 10P − 10Q + 10R = 620, which simplifies to 10P − 10Q + 10R = 110, or P − Q + R = 11.\n\nTo make Q as large as possible, P and R should both be as large as possible, since Q = P + R − 11. The largest single digit is 9, so the largest possible value of P + R is 9 + 9 = 18.\n\nWith P + R at its maximum of 18, Q reaches its maximum value: Q = 18 − 11 = 7. Checking directly with P = 9, R = 9, Q = 7: 498 − 673 + 795 = 620, confirming this works.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "In the following sum, '?' stands for which digit? ? + 2? + 4? + ?5 + ?1 = 22?",
+      "options": {
+        "a": "5",
+        "b": "6",
+        "c": "7",
+        "d": "8"
+      },
+      "answer": "c",
+      "a": "7",
+      "e": "Let the unknown digit be represented by x. The single \"?\" term is just x itself. The term \"2?\" is a two-digit number equal to 20 + x. The term \"4?\" equals 40 + x. The term \"?5\" has x in the tens place, so it equals 10x + 5. The term \"?1\" equals 10x + 1.\n\nAdding all five terms: x + (20 + x) + (40 + x) + (10x + 5) + (10x + 1). Grouping the x terms together: x + x + x + 10x + 10x = 23x. Grouping the constants: 20 + 40 + 5 + 1 = 66. So the left side simplifies to 23x + 66.\n\nThe right side, \"22?\", is a three-digit number equal to 220 + x.\n\nSetting the two sides equal: 23x + 66 = 220 + x. Subtracting x from both sides and subtracting 66 from both sides gives 22x = 154, so x = 7.\n\nChecking directly: 7 + 27 + 47 + 75 + 71 = 227, and 22? with ? = 7 gives 227 — they match.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "If ⊕ means adding 4 times the second number to the first number, then (2 ⊕ 3) ⊕ 5 equals",
+      "options": {
+        "a": "24",
+        "b": "30",
+        "c": "34",
+        "d": "38"
+      },
+      "answer": "c",
+      "a": "34",
+      "e": "The custom operation is defined as a ⊕ b = a + 4b, meaning the first number stays as it is, and 4 times the second number gets added to it.\n\nWorking from the inside out: 2 ⊕ 3 means a = 2 and b = 3, so the result is 2 + 4 × 3 = 2 + 12 = 14.\n\nNow take this result and apply the operation again with 5: 14 ⊕ 5 means a = 14 and b = 5, so the result is 14 + 4 × 5 = 14 + 20 = 34.",
+      "table": null
+    },
+    {
+      "type": "mcq",
+      "q": "If 1 × 2 × 3 × ... × n is denoted by [n], then [9] − [8] − [7] is equal to",
+      "options": {
+        "a": "7 × 8 × [7]",
+        "b": "8 × 9 × [8]",
+        "c": "9 × 7 × [7]",
+        "d": "8 × 7 × [8]"
+      },
+      "answer": "c",
+      "a": "9 × 7 × [7]",
+      "e": "The notation [n] represents the factorial of n, meaning the product of all whole numbers from 1 up to n. So [9] means 9!, [8] means 8!, and [7] means 7!.\n\nA useful shortcut: [9] can be broken down as 9 × 8 × [7], since multiplying [7] by 8 and then by 9 builds up to [9] step by step. Similarly, [8] equals 8 × [7].\n\nSubstituting these into the original expression: [9] − [8] − [7] becomes (9 × 8 × [7]) − (8 × [7]) − [7]. Since [7] is common to every term, it can be factored out: [7] × (9 × 8 − 8 − 1), which simplifies to [7] × (72 − 9) = [7] × 63.\n\nThe number 63 can be broken down as 9 × 7, so the full expression becomes [7] × 9 × 7, which matches option (c), 9 × 7 × [7].",
+      "table": null
+    }
+  ]
+}

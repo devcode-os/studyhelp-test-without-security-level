@@ -1,0 +1,125 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import { getSubjectMeta } from '../../data/subjectsMeta.js';
+
+export function getStaticPaths() {
+  // Discovers every subject folder under src/data/ automatically.
+  // No subject names hardcoded - add a folder, it shows up here.
+  const chapterFiles = import.meta.glob('../../data/*/*.json', { eager: true });
+
+  const bySubject = {};
+
+  for (const [path, mod] of Object.entries(chapterFiles)) {
+    const subject = path.split('/').slice(-2, -1)[0];
+    const items = Array.isArray(mod.default) ? mod.default : [mod.default];
+    const valid = items.filter(
+      (ch) => ch && Array.isArray(ch.faqs) && ch.slug && ch.chapterNumber
+    );
+
+    if (!bySubject[subject]) bySubject[subject] = [];
+    bySubject[subject].push(...valid);
+  }
+
+  return Object.entries(bySubject).map(([subject, chapters]) => ({
+    params: { subject },
+    props: {
+      chapters: chapters.sort((a, b) => a.chapterNumber - b.chapterNumber),
+    },
+  }));
+}
+
+const { subject } = Astro.params;
+const { chapters } = Astro.props;
+const meta = getSubjectMeta(subject);
+
+const totalQuestions = chapters.reduce((sum, ch) => sum + ch.faqs.length, 0);
+---
+<Layout title={meta.seoTitle} description={meta.seoDescription}>
+
+  <Header active="subjects" />
+
+  <div style="max-width:1100px; margin:0 auto; padding:24px;">
+
+    <div style="font-size:13px; color:var(--muted); margin-bottom:12px;">
+      <a href="/" style="color:var(--muted); text-decoration:none;">Home</a> /
+      <a href="/subjects/" style="color:var(--muted); text-decoration:none;">Subjects</a> /
+      {meta.breadcrumb}
+    </div>
+
+    <div style="background:var(--card); border:1px solid var(--border); border-radius:12px; padding:1.5rem; margin-bottom:1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+      <div class="subject-header-left" style="flex:1; min-width:220px;">
+        <h1 style="margin:0 0 10px; font-size:22px;">{meta.heading}</h1>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;" class="stat-pill-row">
+          <div style="background:var(--amber-bg); border-radius:8px; padding:0.6rem 0.9rem; display:flex; align-items:center; gap:8px;">
+            <i class="ti ti-books" style="font-size:20px; color:var(--amber-text);" aria-hidden="true"></i>
+            <div style="text-align:left;">
+              <div style="font-size:17px; font-weight:700; line-height:1.1; color:var(--amber-text-strong);">{chapters.length}</div>
+              <div style="font-size:11px; color:var(--amber-text);">chapters</div>
+            </div>
+          </div>
+          <div style="background:var(--teal-bg); border-radius:8px; padding:0.6rem 0.9rem; display:flex; align-items:center; gap:8px;">
+            <i class="ti ti-help-circle" style="font-size:20px; color:var(--teal-text);" aria-hidden="true"></i>
+            <div style="text-align:left;">
+              <div style="font-size:17px; font-weight:700; line-height:1.1; color:var(--teal-text-strong);">{totalQuestions}+</div>
+              <div style="font-size:11px; color:var(--teal-text);">questions</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="subject-header-right" style="flex:1; min-width:220px;">
+        <div id="free-trial-text" style="font-size:12px; color:var(--muted); margin-bottom:6px;">First 30 answers free, site-wide</div>
+        <a id="unlock-btn" href="/plans/" style="font-size:13px; padding:8px 16px; border:1px solid var(--accent); border-radius:8px; text-decoration:none; background:var(--accent-bg); color:var(--accent); display:inline-block;">Unlock unlimited, Rs. 199</a>
+      </div>
+    </div>
+
+    {chapters.length > 0 ? (
+      <div class="chapter-grid">
+        {chapters.map((ch) => (
+          <a href={`/${ch.slug}/`} class="chapter-card" style="display:block; background:var(--card); border:1px solid var(--border); border-bottom:3px solid var(--success-bg); border-radius:12px; padding:1.25rem; text-decoration:none; color:inherit;">
+            <div class="chapter-card-number" style="width:32px; height:32px; border-radius:50%; background:var(--accent-bg); display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:var(--accent); margin-bottom:12px;">
+              {ch.chapterNumber}
+            </div>
+            <div style="font-weight:700; font-size:15px;">{ch.title}</div>
+            <div style="font-size:12px; color:var(--muted); margin-top:4px;">{ch.faqs.length} questions</div>
+          </a>
+        ))}
+      </div>
+    ) : (
+      <div style="background:var(--card); border:1px dashed var(--border); border-radius:12px; padding:2.5rem; text-align:center; color:var(--muted);">
+        Chapters coming soon.
+      </div>
+    )}
+
+  </div>
+
+  <script define:vars={{ subject }}>
+    const WORKER_URL = 'https://studyhelp-payments.sasi-488.workers.dev';
+
+    // TEMP: identity = stored email, placeholder until real OTP login/session exists.
+    const storedEmail = localStorage.getItem('studyhelp_email');
+
+    if (storedEmail) {
+      fetch(`${WORKER_URL}/check-access?user_id=${encodeURIComponent(storedEmail)}&subject_id=${encodeURIComponent(subject)}`)
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.unlocked) {
+            const btn = document.getElementById('unlock-btn');
+            const trialText = document.getElementById('free-trial-text');
+            if (trialText) trialText.style.display = 'none';
+            if (btn) {
+              btn.textContent = '✓ Unlimited access unlocked';
+              btn.removeAttribute('href');
+              btn.style.cursor = 'default';
+              btn.style.background = 'var(--success-bg, #d1fae5)';
+              btn.style.color = 'var(--success-text, #065f46)';
+              btn.style.borderColor = 'transparent';
+            }
+          }
+        })
+        .catch(() => {
+          // silently ignore — button stays as default "Unlock unlimited" on network error
+        });
+    }
+  </script>
+</Layout>
